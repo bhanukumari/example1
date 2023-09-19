@@ -52,6 +52,9 @@ jobs:
            REMOTE_HOST: ${{ secrets.HOST_DNS }}
            REMOTE_USER: ${{ secrets.USERNAME }}
            TARGET: ${{ secrets.TARGET_DIR }}
+       - name: Build docker image
+         run: docker build -t my-app .
+         
           # ARGS: -r
          #  SCRIPT_BEFORE: |
          #     whoami
