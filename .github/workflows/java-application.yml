@@ -1,4 +1,4 @@
-name: java application
+name: java application 
 on:
   push:
     branches:
