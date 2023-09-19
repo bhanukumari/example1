@@ -30,7 +30,7 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    
+  
     steps:
        - name: Checkout the files
          uses: actions/checkout@v2
