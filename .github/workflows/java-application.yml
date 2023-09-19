@@ -24,7 +24,6 @@ jobs:
         with:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
-
   deploy:
     name: Deploy to EC2 on master branch push
     runs-on: ubuntu-latest
