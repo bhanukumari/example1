@@ -39,6 +39,10 @@ jobs:
          uses: actions/download-artifact@v2
          with:
           name: java-app
+          
+       - name: Install rsync
+         run: sudo apt-get install rsync -y
+         
        - name: Deploy to Server 1
          uses: easingthemes/ssh-deploy@main
          env:
