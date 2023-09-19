@@ -52,6 +52,7 @@ jobs:
            REMOTE_HOST: ${{ secrets.HOST_DNS }}
            REMOTE_USER: ${{ secrets.USERNAME }}
            TARGET: ${{ secrets.TARGET_DIR }}
+           aws-region: ${{ env.AWS_REGION }}
            ARGS: -r
            SCRIPT_BEFORE: |
               whoami
