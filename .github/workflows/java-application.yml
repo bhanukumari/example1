@@ -59,6 +59,8 @@ jobs:
               ls -al
        - name: Build docker image
          run: sudo docker build -t my-app .
+       - name: Run docker container
+         run: docker run -d -p 8080:8080 --name springboot my-app
        
          
           # ARGS: -r
