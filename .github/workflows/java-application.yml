@@ -58,7 +58,7 @@ jobs:
               whoami
               ls -al
        - name: Build docker image
-         run: docker build -t my-app .
+         run: sudo docker build -t my-app .
        
          
           # ARGS: -r
