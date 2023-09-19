@@ -54,3 +54,7 @@ jobs:
            REMOTE_HOST: ${{ secrets.HOST_DNS }}
            REMOTE_USER: ${{ secrets.USERNAME }}
            TARGET: ${{ secrets.TARGET_DIR }}
+           ARGS: -r
+           SCRIPT_BEFORE: |
+              whoami
+              ls -al
