@@ -16,15 +16,7 @@ jobs:
           java-version: '11'
       - name: Build with Maven
         run: mvn clean install
-      - name: Move Artifact
-        run: |
-#         jfrog rt mv "repository/source/path/app.jar" "repository/destination/path/app.jar" \
-#          --url "https://artifactory.example.com/artifactory" \
-          --user ${{ secrets.ARTIFACTORY_USERNAME }} \
-          --password ${{ secrets.ARTIFACTORY_PASSWORD }}
-        env:
-         ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
-         ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
+      
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
