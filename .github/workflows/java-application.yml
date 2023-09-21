@@ -16,11 +16,11 @@ jobs:
           java-version: '11'
       - name: Build with Maven
         run: mvn clean install
-      - name: Set up JFrog CLI
-        run: |
-         wget -qO - https://releases.jfrog.io/artifactory/api/gpg/key/public | sudo apt-key add -
-         chmod +x jfrog
-         sudo mv jfrog /usr/local/bin/
+    #  - name: Set up JFrog CLI
+     #   run: |
+      #   wget -qO - https://releases.jfrog.io/artifactory/api/gpg/key/public | sudo apt-key add -
+       #  chmod +x jfrog
+        # sudo mv jfrog /usr/local/bin/
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
