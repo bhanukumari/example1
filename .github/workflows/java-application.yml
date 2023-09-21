@@ -18,8 +18,8 @@ jobs:
         run: mvn clean install
       - name: Move Artifact
         run: |
-         jfrog rt mv "repository/source/path/app.jar" "repository/destination/path/app.jar" \
-          --url "https://artifactory.example.com/artifactory" \
+#         jfrog rt mv "repository/source/path/app.jar" "repository/destination/path/app.jar" \
+#          --url "https://artifactory.example.com/artifactory" \
           --user ${{ secrets.ARTIFACTORY_USERNAME }} \
           --password ${{ secrets.ARTIFACTORY_PASSWORD }}
         env:
