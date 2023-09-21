@@ -22,7 +22,7 @@ jobs:
           --url "https://artifactory.example.com/artifactory" \
           --user ${{ secrets.ARTIFACTORY_USERNAME }} \
           --password ${{ secrets.ARTIFACTORY_PASSWORD }}
-       env:
+        env:
          ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
          ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
       - name: Upload artifact for deployment job
